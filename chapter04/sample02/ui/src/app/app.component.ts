@@ -1,23 +1,33 @@
 import { Component } from '@angular/core';
-import { AppService } from './app.service';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import 'rxjs/add/operator/finally';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `<h1>Book List App</h1>
+    <p>
+      <button (click)='loadBooks()'>Load Books</button>
+    </p>
+      <span><div *ngFor=\"let book of books\">
+        {{book.name}}
+      </div></span>
+  `,
+  styles: []
 })
-export class AppComponent {
-  constructor(private app: AppService, private http: HttpClient, private router: Router) {
-      this.app.authenticate({}, undefined);
-    }
-    logout() {
-      this.http.post('logout', {}).finally(() => {
-          this.app.authenticated = false;
-          this.router.navigateByUrl('/login');
-      }).subscribe();
-    }
 
+export class AppComponent {  
+  books: Book[];
+
+  constructor(private http: HttpClient) {
+  }
+
+  loadBooks(){  
+     this.http
+      .get<Book[]>('http://localhost:9090/books')
+      .subscribe(data => {this.books = data});
+  }
+}
+
+interface Book {
+  id: string;
+  name: string;
 }
