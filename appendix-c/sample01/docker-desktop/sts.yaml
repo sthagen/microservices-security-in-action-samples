@@ -96,7 +96,7 @@ kind: Service
 metadata:
   name: sts-service
 spec:
- type: LoadBalancer
+ type: NodePort
  selector:
   app: sts
  ports:
