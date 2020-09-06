@@ -2,6 +2,7 @@
 target
 mvnw
 mvnw.cmd
+.vscode
 .classpath
 .settings
 .project
@@ -12,3 +13,4 @@ mvnw.cmd
 .mvn
 .DS_Store
 .gradle
+build

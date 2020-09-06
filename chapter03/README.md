@@ -1,8 +1,7 @@
-## Chapter 3: Deploying a microservice behind an API gateway
-* The need for an API gateway in a microservices architecture?
-* Security at the edge
-* How to pick the correct OAuth 2.0 grant type?
-* Setting up an API gateway with Zuul
-* Deploying a microservice behind Zuul
-* Securing communication between Zuul and the microservice
-* Summary
+## Chapter 3: Securing north/south traffic with an API gateway
+
+
+<img src="../cover.jpeg" style="float: left; width: 100%" />
+
+[Amazon](https://www.amazon.com/Microservices-Security-Action-Prabath-Siriwardena/dp/1617295957/) | [Manning](https://www.manning.com/books/microservices-security-in-action) | [YouTube](https://www.youtube.com/channel/UCoEOYnrqEcANUgbcG-BuhSA) | [Slack](https://bit.ly/microservices-security) | [Notes](../notes.md) | [Supplementary Readings](../supplementary-readings.md)
+

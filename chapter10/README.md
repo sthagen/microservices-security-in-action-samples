@@ -1,12 +1,6 @@
-## Chapter 7: Securing service-to-service communication with JWT
-* What is a JSON Web Token (JWT)? 
-* What does a JWT look like? 
-* JSON Web Signature (JWS) 
-* JSON Web Encryption (JWE)
-* Use cases for securing microservices with JWT 
-* Setting up an STS to issue JWTs 
-* Securing microservices with JWT
-* Using JWT as a data source to do access control
-* Securing service-to-service communication with JWT
-* Exchanging a JWT for a new one with a new audience
-* Summary  
+## Chapter 10: Conquering container security with Docker
+
+<img src="../cover.jpeg" style="float: left; width: 100%" />
+
+[Amazon](https://www.amazon.com/Microservices-Security-Action-Prabath-Siriwardena/dp/1617295957/) | [Manning](https://www.manning.com/books/microservices-security-in-action) | [YouTube](https://www.youtube.com/channel/UCoEOYnrqEcANUgbcG-BuhSA) | [Slack](https://bit.ly/microservices-security) | [Notes](../notes.md) | [Supplementary Readings](../supplementary-readings.md)
+
