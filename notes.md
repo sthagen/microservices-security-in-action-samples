@@ -4,9 +4,23 @@
 
 [Amazon](https://www.amazon.com/Microservices-Security-Action-Prabath-Siriwardena/dp/1617295957/) | [Manning](https://www.manning.com/books/microservices-security-in-action) | [YouTube](https://www.youtube.com/channel/UCoEOYnrqEcANUgbcG-BuhSA) | [Slack](https://bit.ly/microservices-security) | [Supplementary Readings](supplementary-readings.md)
 
+**NOTE: While writing the book we wanted to mostly focus on the concepts, as the concrete technologies used to implement the concepts are constantly changing and we wanted to keep them as much as simple. So we decided to use Spring Boot to implement the OAuth 2.0 authorization server used in the samples of the book. However in practice you may use Keycloak, Auth0, Okta, WSO2, and so on as your authorization server.**
+
+**Spring Boot has deprecated AuthorizationServerConfigurerAdapter, ClientDetailsServiceConfigurer, and AuthorizationServerSecurityConfigurer classes, which we used to implement the authorization server, which we will surely update in the next edition of the book and will also update the github project even before that. However, we expect this will not distract the readers that much, because we don't expect them to implement an authorization server.**
+
 ## Chapter 2
 
 * Page 43 / Section: 2.2.3, the curl command is missing closing doulbe quote after "read write"
+
+* Page 51 / Section: 2.5.1, the response from the cURL command needs to be corrected as the following. The response you see in the book is related to an older dependency, which does not strictly validate the scopes and issues a token for the valid scope, ignoring the others. However, the updated dependency in git repo (which we did later), validates the scopes strictly. This is not defined under the OAuth 2.0 specification, and totatly upto the authorization server (already stated in the book).
+
+```json
+{
+  "error":"invalid_scope",
+  "error_description":"Invalid scope: write",
+  "scope":"read"
+}
+```
 
 ## Chapter 4
 
